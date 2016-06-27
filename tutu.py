@@ -23,9 +23,6 @@ print(stationsIndex)
 start = stationsIds[input('From station:')]
 end = stationsIds[input('To station:')]
 
-# start = stationsIds[1]
-# end = stationsIds[2]
-
 r = UL.urlopen(url%(start,end))
 print(url%(start,end))
 dom = BS(r.read())
@@ -57,5 +54,3 @@ for line in lines:
             print('%s:%s %s:%s %s %s'%(ds[0],ds[1],de[0],de[1],sf,st))
     else:
         print('%s:%s %s:%s %s %s'%(ds[0],ds[1],de[0],de[1],sf,st))
-    # for val in line:
-    #     print(val)
